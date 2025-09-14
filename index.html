@@ -9,38 +9,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
 
   <style>
+   
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
+    html,body { height: 100%; }
     body {
       font-family: "Montserrat", sans-serif;
       background: #ffffff00;
       color: #141414;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
-      overflow-x: hidden;
     }
 
-   
-    .page-wrap {
-      width: 100%;
-      max-width: 1200px;
-      height: 100%;
-      margin: 0 auto;
-    }
-
-    
+    /* NAVIGATION */
     nav {
       background: #f06265;
       height: 55px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: center; /* keep centered links on wide screens */
       position: sticky;
       top: 0;
       z-index: 50;
-      padding: 0 12px;
+      padding: 0 20px; /* room for menu icon */
     }
 
+  
     nav .nav-inner {
       width: 100%;
       max-width: 1200px;
@@ -58,6 +51,8 @@
       align-items: center;
       flex-wrap: nowrap;
       white-space: nowrap;
+      padding: 0;
+      margin: 0;
     }
 
     nav a {
@@ -68,15 +63,20 @@
       font-size: 18px;
     }
 
+    
     .menu-icon {
       position: absolute;
       right: 0;
-      display: none;
+      display: none; 
       padding: 0 6px;
     }
-    .menu-icon img { width: 28px; height: auto; display: block; }
+    .menu-icon img {
+      width: 28px;
+      height: auto;
+      display: block;
+    }
 
-    
+    /* MAIN SECTION */
     .section-one {
       display: flex;
       flex-wrap: wrap;
@@ -86,23 +86,23 @@
     .hero-left {
       flex: 1 1 50%;
       background: linear-gradient(90deg, #fff9b6, #f7d6a6, #ffd1e8);
-      padding: clamp(30px, 6vw, 100px) clamp(18px, 4vw, 70px);
-      min-width: 280px;
+      padding: 150px 50px 150px 70px;
+      min-width: 300px;
     }
 
     .hero-left h1 {
-      font-size: clamp(28px, 4.5vw, 55px);
+      font-size: 55px;
       font-weight: 700;
       letter-spacing: 5px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       text-transform: uppercase;
       line-height: 1;
     }
 
     .hero-left p {
-      font-size: clamp(14px, 1.6vw, 17px);
+      font-size: 17px;
       line-height: 1.5;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       color: #2a2a2a;
       overflow-wrap: break-word;
       word-break: break-word;
@@ -130,13 +130,12 @@
     .hero-right img {
       width: 100%;
       height: 100%;
-      max-height: 720px; /* stops extremely tall images on wide desktops */
       object-fit: cover;
       display: block;
       transition: transform 0.4s ease;
     }
 
- 
+    /* SECTION TWO */
     .section-two {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -147,7 +146,11 @@
       border-top: 10px solid #0f0f0f;
     }
 
-    .left-stack { display: grid; gap: 20px; }
+    .left-stack {
+      display: grid;
+      gap: 20px;
+    }
+
     .left-stack img {
       width: 100%;
       height: 220px;
@@ -171,66 +174,72 @@
       color: #000;
       border-radius: 6px;
     }
-    .promo-card > div:first-child { font-size: 14px; font-weight: 500; text-transform: uppercase; }
+
+    .promo-card > div:first-child {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
     .promo-card h2 {
-      font-size: clamp(20px, 3.2vw, 37px);
+      font-size: 37px;
       font-weight: 750;
       line-height: 1.2;
       margin: 10px 0;
       letter-spacing: 3px;
       text-transform: uppercase;
     }
-    .promo-card img { vertical-align: middle; margin-left: 6px; }
 
-    
+    .promo-card img {
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+
+   
     h1, h2, p, div { overflow-wrap: break-word; word-wrap: break-word; }
 
     
-    @media (max-width: 1200px) {
-      .page-wrap { padding: 0 16px; }
-      .section-two { padding: 80px 40px; gap: 30px; }
+    @media (max-width: 1024px) {
+      .hero-left { padding: 80px 40px; }
+      .hero-left h1 { font-size: 44px; letter-spacing: 4px; }
+      .section-two { padding: 60px 40px; gap: 30px; }
       .big-vertical img { height: 420px; }
     }
 
-    @media (max-width: 1024px) {
-      .hero-left { padding: 60px 36px; }
-      .hero-left h1 { font-size: clamp(26px, 4vw, 44px); letter-spacing: 4px; }
-    }
-
- 
+   
     @media (max-width: 768px) {
-      nav .nav-inner { max-width: 100%; padding: 0 6px; }
-      nav ul { display: none; }          
+      nav { padding: 0 12px; }
+      nav ul { display: none; }         
       .menu-icon { display: block; }     
 
-      .section-one { flex-direction: column; }
       .hero-left {
         flex: 1 1 100%;
-        padding: 40px 18px;
+        padding: 50px 20px;
       }
       .hero-right {
         flex: 1 1 100%;
-        min-height: 200px;
+        min-height: 240px;
       }
-      .hero-left h1 { font-size: 34px; letter-spacing: 3px; margin-bottom: 14px; }
-      .hero-left p { font-size: 15px; margin-bottom: 14px; }
+      .hero-left h1 { font-size: 34px; letter-spacing: 3px; margin-bottom: 18px; }
+      .hero-left p { font-size: 15px; margin-bottom: 18px; }
 
       .section-two {
         grid-template-columns: 1fr;
-        padding: 40px 18px;
+        padding: 40px 20px;
       }
       .left-stack img { height: 200px; }
       .big-vertical img { height: 300px; }
-      .promo-card { padding: 24px; }
+      .promo-card { padding: 28px; }
       .promo-card h2 { font-size: 26px; }
     }
 
+    
     @media (max-width: 420px) {
-      .hero-left { padding: 30px 12px; }
+      .hero-left { padding: 36px 16px; }
       .hero-left h1 { font-size: 28px; letter-spacing: 2px; }
       .hero-left p { font-size: 14px; }
       .cta { padding: 10px 20px; font-size: 13px; }
-      .promo-card { padding: 18px; }
+      .promo-card { padding: 20px; }
       .promo-card h2 { font-size: 22px; letter-spacing: 1px; }
     }
   </style>
@@ -239,7 +248,7 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-inner page-wrap">
+    <div class="nav-inner">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Order</a></li>
@@ -255,44 +264,41 @@
     </div>
   </nav>
 
-  <!-- MAIN  -->
-  <div class="page-wrap">
-    <section class="section-one">
-      <div class="hero-left">
-        <h1>LOREM IPSUM</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          id est vitae dolor rhoncus tristique. Maecenas metus quam,
-          rhoncus euismod lorem in, sollicitudin viverra eros. Donec
-          dictum luctus quam ut tristique. Curabitur nec faucibus purus.
-          Quisque congue sem nec justo mollis, in tincidunt erat pretium.
-          Sed pulvinar, massa ac porta viverra..</p>
-        <div class="cta">Click Me</div>
-      </div>
+  <!-- MAIN -->
+  <section class="section-one">
+    <div class="hero-left">
+      <h1>LOREM IPSUM</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+        id est vitae dolor rhoncus tristique. Maecenas metus quam,
+        rhoncus euismod lorem in, sollicitudin viverra eros. Donec
+        dictum luctus quam ut tristique. Curabitur nec faucibus purus.
+        Quisque congue sem nec justo mollis, in tincidunt erat pretium.
+        Sed pulvinar, massa ac porta viverra..</p>
+      <div class="cta">Click Me</div>
+    </div>
 
-      <div class="hero-right">
-        <img src="pexels-robin-stickel-70497.jpg" alt="hero image">
-      </div>
-    </section>
+    <div class="hero-right">
+      <img src="pexels-robin-stickel-70497.jpg" alt="hero image">
+    </div>
+  </section>
 
-    <!-- SECTION TWO -->
-    <section class="section-two">
-      <div class="left-stack">
-        <img src="pexels-rachel-claire-6752433.jpg" alt="">
-        <img src="pexels-eva-bronzini-6141651.jpg" alt="">
-      </div>
+  <!-- SECTION TWO -->
+  <section class="section-two">
+    <div class="left-stack">
+      <img src="pexels-rachel-claire-6752433.jpg" alt="">
+      <img src="pexels-eva-bronzini-6141651.jpg" alt="">
+    </div>
 
-      <div class="big-vertical">
-        <img src="pexels-mister-mister-3434523.jpg" alt="">
-      </div>
+    <div class="big-vertical">
+      <img src="pexels-mister-mister-3434523.jpg" alt="">
+    </div>
 
-      <div class="promo-card">
-        <div>LOREM IPSUM</div>
-        <h2>LOREM IPSUM<br>SET ADEMIR</h2>
-        <div>Click <img src="icons8-arrow-30.png" alt="arrow" width="20"></div>
-      </div>
-    </section>
-  </div>
+    <div class="promo-card">
+      <div>LOREM IPSUM</div>
+      <h2>LOREM IPSUM<br>SET ADEMIR</h2>
+      <div>Click <img src="icons8-arrow-30.png" alt="arrow" width="20"></div>
+    </div>
+  </section>
 
 </body>
 </html>
-

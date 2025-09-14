@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
 
   <style>
-    /* Reset / base */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
     body {
@@ -18,17 +17,18 @@
       color: #141414;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
-      overflow-x: hidden; /* avoid accidental horizontal scroll */
+      overflow-x: hidden;
     }
 
-    /* LIMIT PAGE WIDTH (prevents stretching when "Request desktop site" is used) */
+   
     .page-wrap {
       width: 100%;
-      max-width: 1200px;      /* <--- max width keeps layout from growing too wide */
+      max-width: 1200px;
+      height: 100%;
       margin: 0 auto;
     }
 
-    /* NAVIGATION */
+    
     nav {
       background: #f06265;
       height: 55px;
@@ -76,7 +76,7 @@
     }
     .menu-icon img { width: 28px; height: auto; display: block; }
 
-    /* MAIN SECTION (kept inside .page-wrap to limit stretching) */
+    
     .section-one {
       display: flex;
       flex-wrap: wrap;
@@ -86,13 +86,11 @@
     .hero-left {
       flex: 1 1 50%;
       background: linear-gradient(90deg, #fff9b6, #f7d6a6, #ffd1e8);
-      /* responsive padding using clamp: won't grow endlessly on wide viewports */
-      padding: clamp(30px, 6vw, 150px) clamp(18px, 4vw, 70px);
+      padding: clamp(30px, 6vw, 100px) clamp(18px, 4vw, 70px);
       min-width: 280px;
     }
 
     .hero-left h1 {
-      /* fluid font size, prevents extremely large text when desktop site is requested */
       font-size: clamp(28px, 4.5vw, 55px);
       font-weight: 700;
       letter-spacing: 5px;
@@ -138,7 +136,7 @@
       transition: transform 0.4s ease;
     }
 
-    /* SECTION TWO */
+ 
     .section-two {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -184,12 +182,12 @@
     }
     .promo-card img { vertical-align: middle; margin-left: 6px; }
 
-    /* TEXT SAFETY */
+    
     h1, h2, p, div { overflow-wrap: break-word; word-wrap: break-word; }
 
-    /* RESPONSIVE RULES */
+    
     @media (max-width: 1200px) {
-      .page-wrap { padding: 0 16px; } /* small side padding on narrower desktops */
+      .page-wrap { padding: 0 16px; }
       .section-two { padding: 80px 40px; gap: 30px; }
       .big-vertical img { height: 420px; }
     }
@@ -199,11 +197,11 @@
       .hero-left h1 { font-size: clamp(26px, 4vw, 44px); letter-spacing: 4px; }
     }
 
-    /* Mobile: hide the nav links (prevents overlap) and show menu icon */
+ 
     @media (max-width: 768px) {
       nav .nav-inner { max-width: 100%; padding: 0 6px; }
-      nav ul { display: none; }            /* hide long link list on mobile */
-      .menu-icon { display: block; }      /* show the icon instead */
+      nav ul { display: none; }          
+      .menu-icon { display: block; }     
 
       .section-one { flex-direction: column; }
       .hero-left {
@@ -257,7 +255,7 @@
     </div>
   </nav>
 
-  <!-- MAIN (wrapped to limit max width and avoid stretching) -->
+  <!-- MAIN  -->
   <div class="page-wrap">
     <section class="section-one">
       <div class="hero-left">
@@ -297,3 +295,4 @@
 
 </body>
 </html>
+

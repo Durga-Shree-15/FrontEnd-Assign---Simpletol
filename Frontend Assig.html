@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frontend Assignment | Simpletol</title>
+
+  <!-- Montserrat font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      background: #ffffff00;
+      color: #141414;
+    }
+
+    /* NAVIGATION */
+    nav {
+      font-family: serif;
+      background: #f06265;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 55px
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 930;
+      letter-spacing: 2px;
+      font-size: 22px;
+      cursor: auto;
+    }
+
+    .menu-icon {
+      position: absolute;
+      right: 170px;
+      width: 28px
+    }
+
+    .menu-icon img {
+      padding-top: 8px;
+      width: 150%;
+      height: 80%;
+    }
+
+    /* MAIN  SECTION */
+    .section-one {
+      display: flex;
+      min-height: calc(100vh - 70px)
+    }
+
+    .hero-left {
+      flex: 45%;
+      background: linear-gradient(90deg, #fff9b6, #f7d6a6, #ffd1e8);
+      padding: 150px 50px 150px 70px;
+
+    }
+
+    .hero-left h1 {
+      font-size: 55px;
+      font-weight: 620;
+      letter-spacing: 5px;
+      margin-bottom: 50px
+    }
+
+    .hero-left p {
+      font-weight: 800%;
+      font-size: 17px;
+      line-height: 1.5;
+      margin-bottom: 53px;
+      color: #2a2a2a
+    }
+
+    .cta {
+      background: #fd7678;
+      color: #fff;
+      padding: 12px 40px;
+      font-weight: 100;
+      font-size: small;
+      width: 30%;
+      cursor: auto;
+    }
+
+    .hero-right {
+      flex: 45%
+    }
+
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.4s ease;
+    }
+
+
+    /* SECTION TWO */
+    .section-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      padding: 110px 160px 110px 80px;
+      align-items: center;
+      background: linear-gradient(90deg, #f5e8c7, #fca59f, #fda9d3);
+      border-top: 10px solid #0f0f0f;
+    }
+
+    .left-stack {
+      display: grid;
+      gap: 20px;
+    }
+
+    .left-stack img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+
+    }
+
+    .big-vertical img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+
+    }
+
+    .promo-card {
+      padding: 50px;
+      width: 430px;
+      max-width: 800px;
+      height: 250px;
+      background: #ff6f72;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #000;
+    }
+
+    .promo-card div {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .promo-card h2 {
+      font-size: 37px;
+      font-weight: 750;
+      line-height: 1.2;
+      margin: 10px 0;
+      letter-spacing: 3px;
+    }
+
+    .promo-card img {
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Order</a></li>
+      <li><a href="#">Food</a></li>
+      <li><a href="#">Restaurant</a></li>
+      <li><a href="#">Testimonials</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <div class="menu-icon">
+      <img src="menu-bar.png" alt="menu">
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <section class="section-one">
+    <div class="hero-left">
+      <h1>LOREM IPSUM</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+        id est vitae dolor rhoncus tristique. Maecenas metus quam,
+        rhoncus euismod lorem in, sollicitudin viverra eros. Donec
+        dictum luctus quam ut tristique. Curabitur nec faucibus purus.
+        Quisque congue sem nec justo mollis, in tincidunt erat pretium.
+        Sed pulvinar, massa ac porta viverra..</p>
+      <div class="cta">Click Me</div>
+    </div>
+    <div class="hero-right">
+      <img src="pexels-robin-stickel-70497.jpg" alt="hero image" style="display: block; margin: 0 auto;" >
+    </div>
+  </section>
+
+  <!-- SECTION TWO -->
+  <section class="section-two">
+    <div class="left-stack">
+      <img src="pexels-rachel-claire-6752433.jpg" alt="">
+      <img src="pexels-eva-bronzini-6141651.jpg" alt="">
+    </div>
+
+    <div class="big-vertical">
+      <img src="pexels-mister-mister-3434523.jpg" alt="">
+    </div>
+
+    <div class="promo-card">
+      <div>LOREM IPSUM</div><br>
+      <h2>LOREM IPSUM<br>SET ADEMIR</h2><br>
+      <div>Click <img src="icons8-arrow-30.png" alt="arrow" width="20"></div>
+    </div>
+  </section>
+</body>
+</html>
